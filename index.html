@@ -208,6 +208,10 @@
       display: none;
     }
 
+    .print-sheet {
+      display: none;
+    }
+
     .hero {
       position: relative;
       z-index: 1;
@@ -691,8 +695,7 @@
       body::before,
       body::after,
       .temple-bells,
-      .top-border,
-      .bottom-border,
+      .biodata-sheet,
       .btn {
         display: none !important;
       }
@@ -702,210 +705,146 @@
         padding: 0;
       }
 
-      .biodata-sheet * {
-        animation: none !important;
-        transition: none !important;
-      }
-
-      .biodata-sheet,
-      .bio-card,
-      .left-panel,
-      .footer {
-        box-shadow: none;
-        break-inside: avoid;
-      }
-
-      .biodata-sheet {
-        border: 3px solid #c8a96a;
-        border-radius: 16px;
-        padding: 7px;
-        min-height: 0;
+      .print-sheet {
+        display: block;
+        width: 200mm;
+        min-height: 287mm;
         max-height: 287mm;
+        margin: 0 auto;
         overflow: hidden;
+        border: 2.5mm solid #8b0f08;
+        border-radius: 4mm;
+        background: #fff7e8;
+        color: #2a160d;
+        font-family: "Poppins", sans-serif;
       }
 
-      .print-title {
-        display: flex;
+      .print-sheet * {
+        box-sizing: border-box;
+      }
+
+      .print-header {
+        display: grid;
+        grid-template-columns: 30mm 1fr;
+        gap: 6mm;
         align-items: center;
-        justify-content: space-between;
-        gap: 10px;
-        margin-bottom: 6px;
-        padding: 7px 9px;
-        border: 1px solid rgba(200, 169, 106, 0.64);
-        border-radius: 10px;
-        background: #fff3d4;
-        color: #5a0702;
+        padding: 6mm 7mm;
+        background: linear-gradient(135deg, #8b0f08, #c91f0b);
+        color: #fff3d4;
       }
 
-      .print-title h2 {
-        color: #5a0702;
-        font-size: 18px;
+      .print-photo {
+        width: 30mm;
+        height: 38mm;
+        object-fit: cover;
+        object-position: center 18%;
+        border: 1.3mm solid #ffc35a;
+        border-radius: 3mm;
+        background: #fff;
+      }
+
+      .print-heading h1 {
+        margin: 0;
+        color: #fff;
+        font-family: "Poppins", sans-serif;
+        font-size: 20pt;
+        font-weight: 800;
         line-height: 1;
       }
 
-      .print-title span {
-        color: #6c2b12;
-        font-size: 8.5px;
+      .print-heading h2 {
+        margin: 2mm 0 0;
+        color: #ffe0a0;
+        font-family: "Poppins", sans-serif;
+        font-size: 10pt;
         font-weight: 700;
-        white-space: nowrap;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
       }
 
-      .hero {
-        grid-template-columns: 104px 1fr;
-        gap: 12px;
-        margin-bottom: 7px;
-        text-align: left;
-      }
-
-      .profile-wrap {
-        width: 100px;
-      }
-
-      .profile-card {
-        padding: 6px;
-        border-width: 3px;
-        border-radius: 14px;
-      }
-
-      .photo-frame {
-        border-width: 3px;
-        border-radius: 10px;
-      }
-
-      .eyebrow {
-        margin-bottom: 4px;
-        font-size: 8px;
-        gap: 6px;
-      }
-
-      .eyebrow::before,
-      .eyebrow::after {
-        width: 20px;
-      }
-
-      h1 {
-        font-size: 25px;
-        line-height: 0.95;
-      }
-
-      .tagline {
-        margin: 6px 0 8px;
-        font-size: 9px;
+      .print-heading p {
+        margin: 3mm 0 0;
+        color: #fff3d4;
+        font-size: 8.5pt;
         line-height: 1.35;
       }
 
-      .actions {
-        gap: 6px;
+      .print-updated {
+        display: inline-block;
+        margin-top: 3mm;
+        padding: 1.3mm 2.8mm;
+        border: 0.25mm solid rgba(255, 224, 160, 0.8);
+        border-radius: 99mm;
+        color: #fff3d4;
+        font-size: 7.2pt;
+        font-weight: 700;
       }
 
-      .contact-pill {
-        min-height: 0;
-        padding: 5px 8px;
-        font-size: 8px;
+      .print-body {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 4mm;
+        padding: 5mm 6mm 4mm;
       }
 
-      .content-grid {
-        grid-template-columns: 0.9fr 1.1fr;
-        gap: 7px;
+      .print-box {
+        break-inside: avoid;
+        margin-bottom: 4mm;
+        border: 0.35mm solid rgba(200, 169, 106, 0.8);
+        border-radius: 3mm;
+        background: #fff2d2;
+        overflow: hidden;
       }
 
-      .left-panel,
-      .bio-card {
-        padding: 8px;
+      .print-box h3 {
+        margin: 0;
+        padding: 2.2mm 3mm;
+        background: #f0b452;
+        color: #5a0702;
+        font-family: "Playfair Display", serif;
+        font-size: 11pt;
+        line-height: 1;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
       }
 
-      .left-panel {
-        border-width: 2px;
-        border-radius: 34px 34px 12px 12px;
+      .print-row {
+        display: grid;
+        grid-template-columns: 34mm 1fr;
+        gap: 2.5mm;
+        padding: 1.65mm 3mm;
+        border-top: 0.2mm solid rgba(139, 15, 8, 0.14);
+        font-size: 7.8pt;
+        line-height: 1.25;
       }
 
-      .ganesh-mark {
-        width: 44px;
-        height: 44px;
-        margin: 0 auto 6px;
-        border-width: 2px;
-        font-size: 1.65rem;
+      .print-row span {
+        color: #6c2b12;
+        font-weight: 700;
       }
 
-      .column {
-        gap: 7px;
+      .print-row strong,
+      .print-row p {
+        margin: 0;
+        color: #2a160d;
+        font-weight: 600;
       }
 
-      .section-title {
-        gap: 6px;
-        margin-bottom: 6px;
-        font-size: 13px;
-        line-height: 1.1;
-        letter-spacing: 0.04em;
+      .print-wide {
+        grid-column: 1 / -1;
       }
 
-      .detail-list {
-        gap: 4px;
-      }
-
-      .detail {
-        grid-template-columns: 74px 1fr;
-        gap: 5px;
-        padding-bottom: 3px;
-        font-size: 8.2px;
-        line-height: 1.22;
-      }
-
-      .left-panel .detail {
-        grid-template-columns: 64px 1fr;
-      }
-
-      .detail span,
-      .detail strong,
-      .detail p,
-      .detail a {
-        font-size: inherit;
-        line-height: inherit;
-      }
-
-      .left-panel section[style] {
-        margin-top: 9px !important;
-      }
-
-      .chips {
-        gap: 4px;
-        margin-top: 7px !important;
-      }
-
-      .chip {
-        padding: 4px 6px;
-        font-size: 8px;
-      }
-
-      .footer {
-        grid-template-columns: 1fr;
-        gap: 5px;
-        margin-top: 7px;
-        padding: 7px;
-        border-radius: 10px;
-      }
-
-      .footer h2 {
-        font-size: 13px;
-      }
-
-      .footer p {
-        font-size: 8px;
-      }
-
-      .footer-contact {
-        justify-content: flex-start;
-        gap: 4px;
-      }
-
-      .footer-contact a {
-        padding: 4px 6px;
-        font-size: 7.5px;
-      }
-
-      .reveal {
-        opacity: 1 !important;
-        transform: none !important;
+      .print-footer {
+        margin: 0 6mm;
+        padding: 3mm 4mm;
+        border-radius: 3mm;
+        background: #8b0f08;
+        color: #fff3d4;
+        font-size: 7.6pt;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
       }
     }
   </style>
@@ -1040,6 +979,69 @@
       </footer>
 
       <div class="bottom-border"></div>
+    </section>
+
+    <section class="print-sheet" aria-label="Printable Aman Singh Bio Data">
+      <header class="print-header">
+        <img class="print-photo" src="assets/aman-singh.jpeg" alt="Aman Singh" />
+        <div class="print-heading">
+          <h1>Aman Singh Bio Data</h1>
+          <h2>Marriage Biodata</h2>
+          <p>I am looking for an educated, understanding, and family-oriented life partner.</p>
+          <span class="print-updated">Updated: 05 June 2026</span>
+        </div>
+      </header>
+
+      <div class="print-body">
+        <div>
+          <article class="print-box">
+            <h3>Personal Details</h3>
+            <div class="print-row"><span>Date of Birth</span><strong>15 May 1995</strong></div>
+            <div class="print-row"><span>Height</span><strong>5 ft 4 in</strong></div>
+            <div class="print-row"><span>Religion</span><strong>Hindu</strong></div>
+            <div class="print-row"><span>Caste</span><strong>Maurya</strong></div>
+            <div class="print-row"><span>Native Place</span><strong>Lucknow, Uttar Pradesh</strong></div>
+            <div class="print-row"><span>Nature</span><strong>Simple, respectful, and family-oriented</strong></div>
+          </article>
+
+          <article class="print-box">
+            <h3>Family Details</h3>
+            <div class="print-row"><span>Father</span><strong>Mr. Manav Singh, Electrician</strong></div>
+            <div class="print-row"><span>Mother</span><strong>Mrs. Suman Devi, Housewife</strong></div>
+            <div class="print-row"><span>Sister</span><strong>Arti Singh, CTET Paper 1 qualified and preparing for government primary teacher exams</strong></div>
+            <div class="print-row"><span>Brother</span><strong>Abhishek Singh, JRF at IIT Bhubaneswar</strong></div>
+            <div class="print-row"><span>Values</span><strong>Traditional, supportive, and well-cultured</strong></div>
+          </article>
+        </div>
+
+        <div>
+          <article class="print-box">
+            <h3>Work Details</h3>
+            <div class="print-row"><span>Company</span><strong>Doon Valley High School</strong></div>
+            <div class="print-row"><span>Role</span><strong>Office Assistant &amp; Social Media Manager</strong></div>
+            <div class="print-row"><span>Work Area</span><strong>School administration, office coordination, and digital media management</strong></div>
+            <div class="print-row"><span>Salary</span><strong>&#8377;2 LPA</strong></div>
+          </article>
+
+          <article class="print-box">
+            <h3>Education</h3>
+            <div class="print-row"><span>Qualification</span><strong>Graduate (B.Sc)</strong></div>
+            <div class="print-row"><span>Level</span><strong>Bachelor's degree in Science</strong></div>
+          </article>
+
+          <article class="print-box">
+            <h3>About & Expectations</h3>
+            <div class="print-row"><span>About</span><p>I am a responsible and humble person who values family, respect, and a balanced life.</p></div>
+            <div class="print-row"><span>Hobbies</span><strong>Music, Traveling</strong></div>
+            <div class="print-row"><span>Expectation</span><p>I am looking for an educated, understanding, respectful, and family-oriented partner who values relationships.</p></div>
+          </article>
+        </div>
+      </div>
+
+      <footer class="print-footer">
+        <span>Contact Person: Manav Singh (6388440895)</span>
+        <span>Lucknow, Uttar Pradesh</span>
+      </footer>
     </section>
   </main>
 
