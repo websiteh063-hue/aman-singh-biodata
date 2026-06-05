@@ -108,7 +108,10 @@
 
     .mantra {
       grid-column: span 3;
-      padding-top: 4px;
+      display: grid;
+      justify-items: center;
+      gap: 4px;
+      padding-top: 0;
       color: rgba(255, 222, 158, 0.9);
       font-family: "Playfair Display", serif;
       font-weight: 700;
@@ -116,6 +119,12 @@
       letter-spacing: 0.1em;
       text-transform: uppercase;
       white-space: nowrap;
+    }
+
+    .ganesh-top-idol {
+      width: clamp(34px, 5vw, 46px);
+      height: auto;
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.28));
     }
 
     .biodata-sheet {
@@ -712,7 +721,10 @@
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
-      <div class="mantra">&#2405;&#2405; Shri Ganeshay Namah &#2405;&#2405;</div>
+      <div class="mantra">
+        <img class="ganesh-top-idol" src="assets/ganesh-idol.svg" alt="Lord Ganesh idol" />
+        <span>&#2405;&#2405; Shri Ganeshay Namah &#2405;&#2405;</span>
+      </div>
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
       <span class="bell"><i class="fa-solid fa-bell"></i></span>
