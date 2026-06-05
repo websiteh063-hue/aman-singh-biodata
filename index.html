@@ -204,6 +204,10 @@
       margin-top: 26px;
     }
 
+    .print-title {
+      display: none;
+    }
+
     .hero {
       position: relative;
       z-index: 1;
@@ -673,7 +677,7 @@
 
     @media print {
       @page {
-        size: A4;
+        size: A4 portrait;
         margin: 5mm;
       }
 
@@ -714,10 +718,36 @@
       .biodata-sheet {
         border: 3px solid #c8a96a;
         border-radius: 16px;
-        padding: 8px;
+        padding: 7px;
         min-height: 0;
         max-height: 287mm;
         overflow: hidden;
+      }
+
+      .print-title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        margin-bottom: 6px;
+        padding: 7px 9px;
+        border: 1px solid rgba(200, 169, 106, 0.64);
+        border-radius: 10px;
+        background: #fff3d4;
+        color: #5a0702;
+      }
+
+      .print-title h2 {
+        color: #5a0702;
+        font-size: 18px;
+        line-height: 1;
+      }
+
+      .print-title span {
+        color: #6c2b12;
+        font-size: 8.5px;
+        font-weight: 700;
+        white-space: nowrap;
       }
 
       .hero {
@@ -754,7 +784,7 @@
       }
 
       h1 {
-        font-size: 28px;
+        font-size: 25px;
         line-height: 0.95;
       }
 
@@ -856,7 +886,7 @@
       }
 
       .footer h2 {
-        font-size: 15px;
+        font-size: 13px;
       }
 
       .footer p {
@@ -897,6 +927,10 @@
 
     <section class="biodata-sheet">
       <div class="top-border"></div>
+      <div class="print-title">
+        <h2>Aman Singh | Hindu Marriage Biodata</h2>
+        <span>Updated: 05 June 2026</span>
+      </div>
 
       <header class="hero reveal">
         <div class="profile-wrap" aria-label="Profile photo">
