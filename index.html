@@ -709,7 +709,8 @@
       }
 
       .biodata-sheet {
-        display: block !important;
+        display: flex !important;
+        flex-direction: column;
         width: 202mm;
         height: 289mm;
         max-height: 289mm;
@@ -845,6 +846,9 @@
       .content-grid {
         grid-template-columns: 0.92fr 1.08fr;
         gap: 3mm;
+        flex: 1 1 auto;
+        min-height: 0;
+        align-items: stretch;
       }
 
       .left-panel,
@@ -854,6 +858,8 @@
       }
 
       .left-panel {
+        display: grid;
+        grid-template-rows: auto 1fr 1fr;
         padding: 4mm 3mm;
         border-width: 0.8mm;
         border-radius: 20mm 20mm 4mm 4mm;
@@ -868,14 +874,25 @@
       }
 
       .left-panel section[style] {
-        margin-top: 4mm !important;
+        margin-top: 3mm !important;
+      }
+
+      .left-panel section {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
       }
 
       .column {
+        height: 100%;
         gap: 3mm;
+        grid-template-rows: 1fr 0.72fr 1.34fr;
+        align-content: stretch;
       }
 
       .bio-card {
+        display: flex;
+        flex-direction: column;
         padding: 3.2mm;
         border-width: 0.55mm;
         border-radius: 4mm;
@@ -894,7 +911,9 @@
       }
 
       .detail-list {
+        flex: 1 1 auto;
         gap: 1.2mm;
+        align-content: space-evenly;
       }
 
       .detail {
@@ -919,7 +938,7 @@
 
       .chips {
         gap: 1.4mm;
-        margin-top: 2.2mm !important;
+        margin-top: 2.6mm !important;
       }
 
       .chip {
