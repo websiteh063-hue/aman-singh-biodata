@@ -674,7 +674,7 @@
     @media print {
       @page {
         size: A4;
-        margin: 10mm;
+        margin: 5mm;
       }
 
       body {
@@ -698,6 +698,11 @@
         padding: 0;
       }
 
+      .biodata-sheet * {
+        animation: none !important;
+        transition: none !important;
+      }
+
       .biodata-sheet,
       .bio-card,
       .left-panel,
@@ -708,42 +713,164 @@
 
       .biodata-sheet {
         border: 3px solid #c8a96a;
-        padding: 14px;
+        border-radius: 16px;
+        padding: 8px;
+        min-height: 0;
+        max-height: 287mm;
+        overflow: hidden;
       }
 
       .hero {
-        grid-template-columns: 150px 1fr;
-        gap: 18px;
-        margin-bottom: 12px;
+        grid-template-columns: 104px 1fr;
+        gap: 12px;
+        margin-bottom: 7px;
         text-align: left;
       }
 
       .profile-wrap {
-        width: 120px;
+        width: 100px;
+      }
+
+      .profile-card {
+        padding: 6px;
+        border-width: 3px;
+        border-radius: 14px;
+      }
+
+      .photo-frame {
+        border-width: 3px;
+        border-radius: 10px;
+      }
+
+      .eyebrow {
+        margin-bottom: 4px;
+        font-size: 8px;
+        gap: 6px;
+      }
+
+      .eyebrow::before,
+      .eyebrow::after {
+        width: 20px;
       }
 
       h1 {
-        font-size: 42px;
+        font-size: 28px;
+        line-height: 0.95;
+      }
+
+      .tagline {
+        margin: 6px 0 8px;
+        font-size: 9px;
+        line-height: 1.35;
+      }
+
+      .actions {
+        gap: 6px;
+      }
+
+      .contact-pill {
+        min-height: 0;
+        padding: 5px 8px;
+        font-size: 8px;
       }
 
       .content-grid {
         grid-template-columns: 0.9fr 1.1fr;
-        gap: 10px;
+        gap: 7px;
       }
 
       .left-panel,
       .bio-card {
-        padding: 13px;
+        padding: 8px;
+      }
+
+      .left-panel {
+        border-width: 2px;
+        border-radius: 34px 34px 12px 12px;
+      }
+
+      .ganesh-mark {
+        width: 44px;
+        height: 44px;
+        margin: 0 auto 6px;
+        border-width: 2px;
+        font-size: 1.65rem;
+      }
+
+      .column {
+        gap: 7px;
+      }
+
+      .section-title {
+        gap: 6px;
+        margin-bottom: 6px;
+        font-size: 13px;
+        line-height: 1.1;
+        letter-spacing: 0.04em;
+      }
+
+      .detail-list {
+        gap: 4px;
       }
 
       .detail {
-        grid-template-columns: 118px 1fr;
-        gap: 8px;
-        padding-bottom: 6px;
+        grid-template-columns: 74px 1fr;
+        gap: 5px;
+        padding-bottom: 3px;
+        font-size: 8.2px;
+        line-height: 1.22;
       }
 
       .left-panel .detail {
-        grid-template-columns: 94px 1fr;
+        grid-template-columns: 64px 1fr;
+      }
+
+      .detail span,
+      .detail strong,
+      .detail p,
+      .detail a {
+        font-size: inherit;
+        line-height: inherit;
+      }
+
+      .left-panel section[style] {
+        margin-top: 9px !important;
+      }
+
+      .chips {
+        gap: 4px;
+        margin-top: 7px !important;
+      }
+
+      .chip {
+        padding: 4px 6px;
+        font-size: 8px;
+      }
+
+      .footer {
+        grid-template-columns: 1fr;
+        gap: 5px;
+        margin-top: 7px;
+        padding: 7px;
+        border-radius: 10px;
+      }
+
+      .footer h2 {
+        font-size: 15px;
+      }
+
+      .footer p {
+        font-size: 8px;
+      }
+
+      .footer-contact {
+        justify-content: flex-start;
+        gap: 4px;
+      }
+
+      .footer-contact a {
+        padding: 4px 6px;
+        font-size: 7.5px;
       }
 
       .reveal {
